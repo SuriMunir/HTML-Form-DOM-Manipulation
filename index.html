@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <title>Form Manipluation</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1 id="title">Form Manipulation</h1>
+      <p id="description">
+        This is a project where in the form data is read and appended to the
+        table below on update. The form is cleared on update.
+      </p>
+    </div>
+    <form class="container border rounded p-3" id="form">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            class="form-control"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="col-sm-6 form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            class="form-control"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="address">Address</label>
+          <textarea
+            name="address"
+            id="address"
+            class="form-control"
+            placeholder="Address"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label for="pincode">Pincode</label>
+          <input
+            type="text"
+            name="pincode"
+            id="pincode"
+            class="form-control"
+            placeholder="Enter 6 digit pincode"
+            required
+          />
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="state">State</label>
+          <input type="text" name="state" id="state" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>Gender</p>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              class="form-check-input"
+              value="male"
+            />
+            <label for="male" class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              class="form-check-input"
+              value="female"
+            />
+            <label for="female" class="form-check-label">Female</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="radio"
+              name="gender"
+              id="other"
+              class="form-check-input"
+              value="other"
+            />
+            <label for="other" class="form-check-label">Other</label>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <p>Food Options (Choose at least two)</p>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="checkbox"
+              name="food"
+              id="Indian"
+              class="form-check-input"
+              value="Indian"
+            />
+            <label for="male" class="form-check-label">Indian</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="checkbox"
+              name="food"
+              id="Chinese"
+              class="form-check-input"
+              value="Chinese"
+            />
+            <label for="female" class="form-check-label">Chinese</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="checkbox"
+              name="food"
+              id="Continental"
+              class="form-check-input"
+              value="Continental"
+            />
+            <label for="other" class="form-check-label">Continental</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="checkbox"
+              name="food"
+              id="Mexican"
+              class="form-check-input"
+              value="Mexican"
+            />
+            <label for="other" class="form-check-label">Mexican</label>
+          </div>
+          <div class="form-check form-check-inline mr-5">
+            <input
+              type="checkbox"
+              name="food"
+              id="Italian"
+              class="form-check-input"
+              value="Italian"
+            />
+            <label for="other" class="form-check-label">Italian</label>
+          </div>
+          <p class="error">Please choose at least 2 options</p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3" id="submit">
+        Update
+      </button>
+    </form>
+    <div class="container mt-5">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Food Options</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>

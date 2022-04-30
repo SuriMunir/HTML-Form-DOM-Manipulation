@@ -1,0 +1,13 @@
+#address{
+   width:100%
+}
+
+.error{
+   color:red;
+   font-size:12px;
+   display: none;
+}
+
+.error.display-error{
+   display: block;
+}
